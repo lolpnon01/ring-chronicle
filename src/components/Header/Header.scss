@@ -11,6 +11,44 @@
   z-index: 3;
   position: relative;
 
+  &-sidebar {
+    position: absolute;
+    width: 100%;
+    height: 270px;
+    top: -270px;
+    transition: 0.5s;
+    left: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.95);
+
+    &.active {
+      top: 80px;
+      opacity: 1;
+      color: #fff;
+    }
+
+    &-link {
+      font-family: $work-sans-font;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 25px;
+    }
+  }
+
+  &-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
   &-img {
     width: 262px;
     position: absolute;
@@ -19,7 +57,10 @@
     z-index: 1;
 
     @include respond(md) {
-      width: 162px;
+      width: 132px;
+      position: relative;
+      left: unset;
+      margin-bottom: -20px;
     }
   }
 
@@ -40,6 +81,24 @@
       &:last-child {
         margin-right: 67px;
       }
+
+      @include respond(md) {
+        display: none;
+      }
+    }
+
+    &-burger {
+      display: none;
+      margin-left: 15px;
+      cursor: pointer;
+      background-color: inherit;
+      border: none;
+      padding: 0;
+      width: 26px;
+
+      @include respond(md) {
+        display: block;
+      }
     }
 
     &-btn {
@@ -58,10 +117,16 @@
       text-transform: uppercase;
       background-color: inherit;
       cursor: pointer;
+
+      @include respond(md) {
+        width: 104px;
+      }
     }
   }
 
   @include respond(md) {
     padding: 10px;
+    justify-content: space-between;
+    align-items: center;
   }
 }
