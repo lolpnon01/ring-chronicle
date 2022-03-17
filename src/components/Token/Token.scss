@@ -1,0 +1,69 @@
+@import "src/styles/mixins";
+@import "src/styles/constants";
+
+.token {
+  padding: 11px 0 40px 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+
+    @include respond(md) {
+      height: 100%;
+      width: auto;
+      left: unset;
+    }
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 57px;
+    letter-spacing: 1.5px;
+    font-family: $source-han-sans-font;
+    background: linear-gradient(90deg, #E0AD6E 18.91%, #FFFFAD 42.17%, #DBAA68 63.54%, #92663F 84.03%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    width: 465px;
+    text-align: center;
+
+    @include respond(md) {
+      margin-bottom: -130px;
+    }
+  }
+
+  &-arrow {
+    width: 56px;
+    height: 306px;
+    margin-bottom: 34px;
+
+    @include respond(md) {
+      transform: rotate(90deg);
+      margin-bottom: 0;
+      margin-left: -7px;
+    }
+  }
+
+  &-img {
+    height: 517px;
+
+    @include respond(md) {
+      width: 480px;
+      height: auto;
+      margin-top: -100px;
+    }
+  }
+
+  @include respond(md) {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,69 @@
+@import "src/styles/mixins";
+@import "src/styles/constants";
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 250px 0 86px 0;
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.25);
+  margin-top: -130px;
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+
+    @include respond(md) {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &-title {
+    margin: 87px 0 43px 0;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 78px;
+    text-align: center;
+    font-family: $source-han-sans-font;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #E0AD6E 18.91%, #FFFFAD 42.17%, #DBAA68 63.54%, #92663F 84.03%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    @include respond(md) {
+      font-size: 32px;
+      line-height: 48px;
+    }
+  }
+
+  &-desc {
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 38px;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: $source-han-sans-font;
+    margin: 0 0 87px 0;
+
+    @include respond(md) {
+      margin: 0 0 57px 0;
+      font-size: 19px;
+      line-height: 30px;
+    }
+  }
+
+  &-btn {
+    cursor: pointer;
+  }
+
+  @include respond(md) {
+    padding: 150px 0 65px 0;
+  }
+}

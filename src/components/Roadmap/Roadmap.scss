@@ -1,0 +1,151 @@
+@import "src/styles/mixins";
+@import "src/styles/constants";
+
+.roadmap {
+  padding: 40px 0 71px 113px;
+  position: relative;
+  overflow: hidden;
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+
+    @include respond(md) {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 40px;
+    letter-spacing: 1.5px;
+    background: linear-gradient(90deg, #E0AD6E 18.91%, #FFFFAD 42.17%, #DBAA68 63.54%, #92663F 84.03%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: $source-han-sans-font;
+    margin: 0 0 9px 0;
+  }
+
+  &-arrow {
+    margin-left: 5px;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+
+    @include respond(md) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &-phase {
+    background: rgba(55, 69, 72, 0.55);
+    padding: 0 14px 5px 14px;
+    height: fit-content;
+    position: relative;
+
+    &-img {
+      position: absolute;
+      left: -19px;
+      bottom: -18px;
+      width: 56px;
+    }
+
+    &-title {
+      font-family: $source-han-sans-font;
+      font-weight: 900;
+      font-size: 31px;
+      line-height: 46px;
+      letter-spacing: 1.5px;
+      background: linear-gradient(90deg, #E0AD6E 18.91%, #FFFFAD 42.17%, #DBAA68 63.54%, #92663F 84.03%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      margin: 5px 0;
+    }
+
+    &-step {
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 237%;
+      letter-spacing: 1.5px;
+      color: #FFFEFF;
+      font-family: $source-han-sans-font;
+      border-bottom: 1px solid #676968;
+
+      &:last-child {
+        border: none;
+      }
+    }
+
+    &-1 {
+      margin-right: 71px;
+      margin-top: 144px;
+
+      @include respond(md) {
+        margin-right: 0;
+        margin-top: 20px;
+        width: 200px;
+      }
+    }
+
+    &-2 {
+      margin-right: 111px;
+      margin-top: 96px;
+
+      .roadmap-phase-img {
+        height: 187px;
+        bottom: -13px;
+      }
+
+      @include respond(md) {
+        margin-right: 0;
+        margin-top: 40px;
+        width: 200px;
+      }
+    }
+
+    &-3 {
+      margin-right: 10px;
+
+      .roadmap-phase-img {
+        height: 123px;
+        bottom: -9px;
+      }
+
+      @include respond(md) {
+        margin-right: 0;
+        margin-top: 40px;
+        width: 200px;
+      }
+    }
+
+    &-4 {
+      margin-top: 217px;
+
+      .roadmap-phase-img {
+        height: 152px;
+        bottom: -11px;
+      }
+
+      @include respond(md) {
+        margin-top: 40px;
+        width: 200px;
+      }
+    }
+  }
+
+  @include respond(md) {
+    padding: 30px 10px;
+  }
+}

@@ -1,0 +1,105 @@
+@import "src/styles/mixins";
+@import "src/styles/constants";
+
+.about {
+  padding: 30px 0 20px 0;
+  position: relative;
+  overflow: hidden;
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+
+    @include respond(md) {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &-effect {
+    bottom: -90px;
+    right: 60px;
+    width: 285px;
+    position: absolute;
+
+    @include respond(md) {
+      display: none;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+
+  &-title {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 38px;
+    background: linear-gradient(90deg, #E0AD6E 18.91%, #FFFFAD 42.17%, #DBAA68 63.54%, #92663F 84.03%);    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: $source-han-sans-font;
+  }
+
+  &-arrow {
+    height: 39px;
+    width: 212px;
+    margin-bottom: 34px;
+  }
+
+  &-imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-item {
+      height: 250px;
+      margin-right: 40px;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      @include respond(md) {
+        height: auto;
+        width: 95%;
+        margin: 0 5px 20px 5px;
+
+        &:last-child {
+          margin: 0 5px 0 5px;
+        }
+      }
+    }
+
+    @include respond(md) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &-desc {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 237%;
+    color: #fff;
+    font-family: $source-han-sans-font;
+    width: 508px;
+    text-align: center;
+    margin: 45px 0 25px 0;
+
+    @include respond(md) {
+      margin: 35px 0 15px 0;
+      width: 95%;
+    }
+  }
+}

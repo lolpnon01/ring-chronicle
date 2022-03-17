@@ -1,0 +1,21 @@
+@import "src/styles/mixins";
+@import "src/styles/constants";
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 118px;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 300;
+  font-family: $source-han-sans-font;
+
+  @include respond(md) {
+    height: 60px;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,137 @@
+@import "src/styles/mixins";
+@import "src/styles/constants";
+
+.drop {
+  padding: 67px 0 71px 100px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+
+  &-bg {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+
+    @include respond(md) {
+      height: 100%;
+      width: auto;
+      left: unset;
+      top: 0;
+    }
+  }
+
+  &-left {
+    &-title {
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 75px;
+      font-family: $source-han-sans-font;
+      letter-spacing: 1.5px;
+      color: #FFFFFF;
+      margin: 0 0 30px 0;
+
+      @include respond(md) {
+        font-size: 30px;
+        line-height: 45px;
+        width: 300px;
+        margin: 0 0 20px 0;
+      }
+    }
+
+    &-desc {
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 33px;
+      letter-spacing: 1.5px;
+      font-family: $source-han-sans-font;
+      color: #FFFFFF;
+      margin: 0 0 30px 0;
+
+      @include respond(md) {
+        font-size: 18px;
+        width: 300px;
+        line-height: 27px;
+        margin: 0 0 20px 0;
+      }
+    }
+
+    &-socials {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+
+      &-item {
+        cursor: pointer;
+        margin-right: 16px;
+      }
+    }
+
+    &-link {
+      background: rgba(49, 56, 75, 0.7);
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 30px;
+      text-decoration: none;
+      letter-spacing: 1.5px;
+      color: #FFFFFF;
+      font-family: $source-han-sans-font;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 394px;
+      height: 66px;
+
+      @include respond(md) {
+        width: 300px;
+        padding: 10px;
+      }
+    }
+
+    @include respond(md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &-right {
+    margin-left: 120px;
+    margin-bottom: 71px;
+
+    &-item {
+      cursor: pointer;
+
+      img {
+        width: 180px;
+      }
+
+      &:first-child {
+        margin-right: 30px;
+
+        @include respond(md) {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    @include respond(md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  @include respond(md) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 10px 30px 10px;
+  }
+}
